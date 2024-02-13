@@ -16,7 +16,7 @@ export default function App({setAdded}) {
   const submitForm=()=>{
     const data={name:name?.target?.value,type:type?.target?.value,serie:serie?.target?.value,marque:marque?.target?.value}
     console.log(data);
-    axios.post('http://192.168.60.204:3000/nft',data)
+    axios.post('http://localhost:3000/nft',data)
     .then(response => {
       console.log('POST request successful');
       setAdded(true)
