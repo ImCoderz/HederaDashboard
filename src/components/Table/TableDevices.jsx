@@ -31,7 +31,7 @@ const statusColorMap = {
   vacation: "warning",
 };
 
-const INITIAL_VISIBLE_COLUMNS = ["name", "role", "status", "actions"];
+const INITIAL_VISIBLE_COLUMNS = ["name", "type", "marque", "serie"];
 
 export default function App() {
     const [added, setAdded] = React.useState(false);
@@ -39,7 +39,7 @@ export default function App() {
 
     useEffect(()=>{
         const getDevices=async ()=>{
-            const res=await axios.get("http://localhost:3000/devices")
+            const res=await axios.get("https://hedera-backend.vercel.app/devices")
             console.log(res.data);
             setUsers(res.data)
         }
